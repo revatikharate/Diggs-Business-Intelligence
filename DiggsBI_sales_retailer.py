@@ -43,7 +43,7 @@ while(1):
 df_sales = json_normalize(sales_data)
 #print(df_sales)
 #calculating no of sales records for each retailer type
-df_retailersales_count=df.projectName.value_counts()
+df_retailersales_count=df_sales.projectName.value_counts()
 print(df_retailersales_count)
 print("-------------------------------------------------") 
 #calculating total amount of sales for each retailer type
