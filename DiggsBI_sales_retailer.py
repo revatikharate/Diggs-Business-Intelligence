@@ -25,12 +25,8 @@ while(1):
     if not response.json():
         break
     #print (response.json())
-    page_data=response.json()
-    #separarting each object from the the output array and then appending it sales_Data to have an array of salesrecord objects
-    while len(page_data)>0:
-        sales_data += page_data
-    #end of a single page
-    #print("-------------------------------------------------") 
+    #adding the all the page responses to sales_data 
+    sales_data += response.json()
     #increasing the page value to iterate through all pages and get the data
     page+=1 
 #print(sales_data)                    
